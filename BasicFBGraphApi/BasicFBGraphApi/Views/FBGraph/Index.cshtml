@@ -1,0 +1,88 @@
+﻿@model FacebookData
+
+
+<div class="text-center">
+    <form asp-controller="FBGraph" asp-action="Index" method="post" enctype="multipart/form-data">
+        <div class="row">
+            <div class="card-body">
+                <div class="form-group row mb-2">
+                    <label class="col-form-label col-sm-3">Your Token :</label>
+                    <div class="col-sm-9">
+                        <input type="text" asp-for="token" class="form-control" />
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row mb-2">
+                <div class="col-sm-9">
+                    <button type="submit" class="btn btn-primary">Send Token</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+&nbsp;
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <label>Proporties :</label>
+        </div>
+        <div class="col-6">
+            <label>Your Profile :</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <ul>
+                <li>First Name : </li>
+                <li>Last Name  : </li>
+                <li>Email      : </li>
+                <li>Id         : </li>
+                <li>Name Format: </li>
+                <li>Name       : </li>
+                <li>Accounts   : </li>
+            </ul>
+        </div>
+        <div class="col-6">
+            <ul>
+                <li>@Model.first_name</li>
+                <li>@Model.last_name</li>
+                <li>@Model.email</li>
+                <li>@Model.id</li>
+                <li>@Model.name_format</li>
+                <li>@Model.name</li>
+                <li>@Model.accounts</li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <ul>
+                <li>Instagram Name                : </li>
+                <li>Instagram Id                  : </li>
+                <li>About                         : </li>
+                <li>Birthday                      : </li>
+                <li>Category                      : </li>
+                <li>Is Always Open?               : </li>
+                <li>Followers Count               : </li>
+                <li>Business Account              : </li>
+                <li>Link                          : </li>
+                <li>Name With Location Descriptor : </li>
+            </ul>
+        </div>
+        <div class="col-6">
+            <ul>
+                <li>@Model.igName</li>
+                <li>@Model.igId</li>
+                <li>@Model.about</li>
+                <li>@Model.birthday</li>
+                <li>@Model.category</li>
+                <li>@Model.is_always_open</li>
+                <li>@Model.followers_count</li>
+                <li>@Model.instagram_business_account</li>
+                <li>@Model.link</li>
+                <li>@Model.name_with_location_descriptor</li>
+            </ul>
+        </div>
+    </div>
+</div>
